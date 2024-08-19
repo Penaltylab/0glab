@@ -16,20 +16,18 @@ source .bash_profile
 
 **Node Installation**
 
-Node Name
-
-Your Node Name
-Port prefix
-
-266
-# Clone project repository
+**Clone project repository**
+```
 cd && rm -rf 0g-chain
 git clone https://github.com/0glabs/0g-chain
 cd 0g-chain
 git checkout v0.2.3
+```
 
-# Build binary
+**Build binary**
+```
 make install
+```
 
 # Set node CLI configuration
 0gchaind config chain-id zgtendermint_16600-2
