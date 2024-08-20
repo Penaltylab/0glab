@@ -1,4 +1,4 @@
-# Dependencies Installation
+# Dependencies Installation**
 
 **Install dependencies for building from source**
 ```
@@ -14,8 +14,6 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile
 source .bash_profile
 ```
 
-**Node Installation**
-
 **Clone project repository**
 ```
 cd && rm -rf 0g-chain
@@ -29,11 +27,12 @@ git checkout v0.2.3
 make install
 ```
 
-# Set node CLI configuration
+**Set node CLI configuration**
+```
 0gchaind config chain-id zgtendermint_16600-2
 0gchaind config keyring-backend test
 0gchaind config node tcp://localhost:26657
-
+```
 # Initialize the node
 0gchaind init "Your Node Name" --chain-id zgtendermint_16600-2
 
