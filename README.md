@@ -67,7 +67,8 @@ sed -i \
 curl "https://snapshots-testnet.nodejumper.io/0g-testnet/0g-testnet_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.0gchain"
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/0gchaind.service > /dev/null << EOF
 [Unit]
 Description=0G node service
@@ -83,11 +84,14 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable 0gchaind.service
+```
 
-# Start the service and check the logs
+**Start the service and check the logs**
+```
 sudo systemctl start 0gchaind.service
 sudo journalctl -u 0gchaind.service -f --no-hostname -o cat
 Secure Server Setup (Optional)
+```
 
 # generate ssh keys, if you don't have them already, DO IT ON YOUR LOCAL MACHINE
 ssh-keygen -t rsa
